@@ -8,6 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("API is running");
+});
+
 const API_KEY = process.env.MAILCHIMP_API_KEY;
 const LIST_ID = process.env.MAILCHIMP_AUDIENCE_ID;
 
